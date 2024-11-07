@@ -1,0 +1,137 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/index.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/button.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/form.css' %}"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta property="og:url" content="https://url/user" />
+    <title>Untitled</title>
+    <meta property="og:title" content="Untitled" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="noindex, nofollow" />
+    <style>
+      .button{
+        width: 60%;
+        height: 40px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body class="w-body">
+    <div class="w-box c1n7648y cn2ox1e cwc8lle c4nlleq">
+      <form method="post">
+        {% csrf_token %}
+        <button
+        type="submit"
+        id="Create_Ticket"
+        class="button w-button c1fhlsmt chms1hh c1k2q57n cd0qpjg c1mobvby c1naapjh c2vdqtd c1d2x4is c184qw0g c1irc81n cb18och cu8ma1p ckzzsd8 c427guj"
+      >
+        <a class="button" href="{% url 'tickets:create_ticket' %}">Create Ticket</a>
+        </button
+      ><button
+        type="submit"
+        id="Logout"
+        class="button w-button c1fhlsmt chms1hh c1k2q57n cd0qpjg c1mobvby c1naapjh c2vdqtd c1d2x4is c184qw0g c1irc81n cb18och cu8ma1p ckzzsd8"
+      >
+        <a class="button" href="{% url 'authentication:logout' %}">Logout</a>
+      </button>
+      </form>
+      
+    </div>
+    <div class="w-box c15p6v73 c4nlleq cei999y cwc8lle">
+      <div
+        class="w-box c1989sry c4nlleq cqn71a8 c74eg4q c31qj78 cn2ox1e ckz8n6i"
+      >
+      <div
+      style="background-color: white; border: none;"
+
+      class="w-box c4nlleq cwc8lle cjonojh c11nwoj7 c1txsxg5 c12bmi33 c59hyy4 c5mnqdr c10ga5ek cmvwdsa c1eae2og cn2ox1e chzyjj9 cxbbmxk c12e9k5o c1u8xcvj"
+      >
+        <div style="margin-right: 5%; margin-left: 0%;" class="w-text">Expert</div>
+        <div style="margin-right: 5%; margin-left: 0%;" class="w-text">Date</div>
+        <div style="margin-right: 5%; margin-left: 0%;" class="w-text">Category</div>
+        <div style="margin-right: 5%; margin-left: 0%;" class="w-text">Status</div>
+      </div>
+      
+      {% for ticket in tickets %}
+        <div
+          style="background-color: white; border: none;"
+          class="w-box c4nlleq cwc8lle cjonojh c11nwoj7 c1txsxg5 c12bmi33 c59hyy4 c5mnqdr c10ga5ek cmvwdsa c1eae2og cn2ox1e chzyjj9 cxbbmxk c12e9k5o c1u8xcvj"
+        >
+        <div class="w-text">{{ ticket.expert }}</div>
+        <div class="w-text">{{ ticket.created }}</div>
+        <div class="w-text">{{ ticket.category }}</div>
+        <div class="w-text">{{ ticket.status }}</div>
+          <button
+            type="submit"
+            id="OpenTicket"
+            class="w-button cd0qpjg c184qw0g"
+          >
+          <a class="button" href="{% url 'chat:chat_page' pk=ticket.pk %}">Open</a>
+          </button>
+        </div>
+        {% endfor %}
+        
+      </div>
+    </div>
+    <script id="vike_pageContext" type="application/json">
+      {
+        "abortReason": "!undefined",
+        "_urlRewrite": null,
+        "_urlRedirect": "!undefined",
+        "abortStatusCode": "!undefined",
+        "_abortCall": "!undefined",
+        "_pageContextInitIsPassedToClient": "!undefined",
+        "_pageId": "/pages/user",
+        "routeParams": {},
+        "data": {
+          "url": "https://url/user",
+          "system": { "params": {}, "search": {}, "origin": "https://url" },
+          "resources": {},
+          "pageMeta": {
+            "title": "Untitled",
+            "description": "",
+            "excludePageFromSearch": true,
+            "language": "",
+            "socialImageAssetName": "!undefined",
+            "socialImageUrl": "",
+            "status": 200,
+            "redirect": "",
+            "custom": []
+          }
+        }
+      }
+    </script>
+    <script
+      src="{% static 'entries/entry-server-routing.js' %}"
+      type="module"
+      async
+    ></script>
+    <link
+      rel="modulepreload"
+      href="{% static 'entries/pages_user.js' %}"
+      as="script"
+      type="text/javascript"
+    /><link
+      rel="modulepreload"
+      href="{% static 'chunks/chunk.js' %}"
+      as="script"
+      type="text/javascript"
+    />
+  </body>
+</html>

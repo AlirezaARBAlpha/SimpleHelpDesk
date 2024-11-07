@@ -1,0 +1,80 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/index.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/button.css' %}"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta property="og:url" content="https://url/" />
+    <title>Home</title>
+    <meta property="og:title" content="Home" />
+    <meta property="og:type" content="website" />
+  </head>
+  <body class="w-body ckwlzlk cn2ox1e cwc8lle cstj6r7 c4nlleq">
+    <button
+  
+      type="submit"
+      class="w-button ckwlzlk cpfy9ga c3owew8 ch4ps4j cesai8l cgj7fvi c1ecrlhx chzhb25 c60hj6m c1xyw2jz cb4q6r0 c1fgyybp c1ue27z6 c11x1b3o cung8fc"
+    >
+      <a class="button" href="{% url 'authentication:signup' %}">Sign up</a></button
+    ><button
+      type="submit"
+      class="w-button ckwlzlk cpfy9ga c3owew8 ch4ps4j cesai8l cgj7fvi c1ecrlhx chzhb25 c60hj6m c1xyw2jz cb4q6r0 c1fgyybp"
+    >
+    <a class="button" href="{% url 'authentication:signin' %}">Sign in</a>
+    </button>
+    <script id="vike_pageContext" type="application/json">
+      {
+        "abortReason": "!undefined",
+        "_urlRewrite": null,
+        "_urlRedirect": "!undefined",
+        "abortStatusCode": "!undefined",
+        "_abortCall": "!undefined",
+        "_pageContextInitIsPassedToClient": "!undefined",
+        "_pageId": "/pages/index",
+        "routeParams": {},
+        "data": {
+          "url": "https://url/",
+          "system": { "params": {}, "search": {}, "origin": "https://url" },
+          "resources": {},
+          "pageMeta": {
+            "title": "Home",
+            "description": "!undefined",
+            "excludePageFromSearch": "!undefined",
+            "language": "!undefined",
+            "socialImageAssetName": "!undefined",
+            "socialImageUrl": "!undefined",
+            "status": "!undefined",
+            "redirect": "!undefined",
+            "custom": []
+          }
+        }
+      }
+    </script>
+    <script
+      src="{% static 'entries/entry-server-routing.js' %}"
+      type="module"
+      async
+    ></script>
+    <link
+      rel="modulepreload"
+      href="{% static 'entries/pages_index.js' %}"
+      as="script"
+      type="text/javascript"
+    /><link
+      rel="modulepreload"
+      href="{% static 'chunks/chunk.js' %}"
+      as="script"
+      type="text/javascript"
+    />
+  </body>
+</html>

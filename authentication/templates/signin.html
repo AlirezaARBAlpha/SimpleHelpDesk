@@ -1,0 +1,96 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/index.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/form.css' %}"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta property="og:url" content="https://url/form" />
+    <title>Untitled</title>
+    <meta property="og:title" content="Untitled" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+  <body class="w-body c9gngpw">
+    <div
+      class="w-box c1lijzsd c1uawj8t ckwlzlk c1989sry c15p6v73 cwc8lle cn2ox1e c4nlleq"
+    >
+      <form
+        class="form w-form cwc8lle cdcaul cn2ox1e ckwlzlk c3uvt9t cu1miiy cwet28m c1qek586 ceqylgn cl03xs8 c1dgjgm1 cl3aefy c4nlleq c65tu32 cy6622d c1bi5a2g cgamfdx cqn71a8 c5kw0tu c38nh7v c1048q51 c1ik6q69 cc6doim c12bmi33 c59hyy4 c5mnqdr c10ga5ek cptb6uc c126txz0 c1frzoan c73pma"
+        method="post"
+      >
+      {% csrf_token %}
+      <div class="user-box">
+        <input 
+        type="text" name="username" required="">
+        <label>Username</label>
+      </div>
+
+      <div class="user-box">
+        <input 
+        type="password" name="password" required="">
+        <label>Password</label>
+      </div>
+        <button
+          type="submit"
+          class="w-button crg0o1g c1y549pj c1n7648y cv7rril chcjmgq c136zwze cdtxgot c159vf6e c184qw0g"
+        >
+          Sign in
+        </button>
+      </form>
+    </div>
+    <script id="vike_pageContext" type="application/json">
+      {
+        "abortReason": "!undefined",
+        "_urlRewrite": null,
+        "_urlRedirect": "!undefined",
+        "abortStatusCode": "!undefined",
+        "_abortCall": "!undefined",
+        "_pageContextInitIsPassedToClient": "!undefined",
+        "_pageId": "/pages/form",
+        "routeParams": {},
+        "data": {
+          "url": "https://url/form",
+          "system": { "params": {}, "search": {}, "origin": "https://url" },
+          "resources": {},
+          "pageMeta": {
+            "title": "Untitled",
+            "description": "",
+            "excludePageFromSearch": true,
+            "language": "",
+            "socialImageAssetName": "!undefined",
+            "socialImageUrl": "",
+            "status": 200,
+            "redirect": "",
+            "custom": []
+          }
+        }
+      }
+    </script>
+    <script
+      src="{% static 'entries/entry-server-routing.js' %}"
+      type="module"
+      async
+    ></script>
+    <link
+      rel="modulepreload"
+      href="{% static 'entries/pages_form.js' %}"
+      as="script"
+      type="text/javascript"
+    /><link
+    rel="modulepreload"
+    href="{% static 'chunks/chunk.js' %}"
+    as="script"
+    type="text/javascript"
+  />
+  </body>
+</html>
